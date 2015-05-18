@@ -90,3 +90,32 @@ callMeMaybe(iJustMetYou, true);
 callMeMaybe(andThisIsCrazy, false);
 
 callMeMaybe(function(){return "and here's my number, so"}, true);
+
+
+
+
+
+function forEach(array, action) {
+  for (var i = 0; i < array.length; i++)
+    action(array[i]);
+}
+
+/*
+forEach(['poop', 'foop', 'poof', 'woof', 'foow'], function(x){console.log(x); return '';})
+
+forEach([alert(), console.log('*****')], function(x) {
+  console.log(x);
+  console.log('I\'ve got a lovely bunch of coconuts');
+  return '';
+})
+
+forEach(['poop', 'foop', 'poof', 'woof', 'foow'], function(item, index){
+	console.log(item, index);
+})
+*/
+
+// ['poop', 'foop', 'poof', 'woof', 'foow'].forEach(console.log);
+
+// ['poop', 'foop', 'poof', 'woof', 'foow'].forEach(substring(1,2));
+
+['poop', 'foop', 'poof', 'woof', 'foow'].forEach(toUpperCase);
